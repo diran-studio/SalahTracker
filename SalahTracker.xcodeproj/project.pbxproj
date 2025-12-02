@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2C930B632EDF697600140C1D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2C930B622EDF697600140C1D /* FirebaseAuth */; };
+		2C930B652EDF697600140C1D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2C930B642EDF697600140C1D /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2C930B362EDF579600140C1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C930B632EDF697600140C1D /* FirebaseAuth in Frameworks */,
+				2C930B652EDF697600140C1D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = SalahTracker;
 			packageProductDependencies = (
+				2C930B622EDF697600140C1D /* FirebaseAuth */,
+				2C930B642EDF697600140C1D /* FirebaseFirestore */,
 			);
 			productName = SalahTracker;
 			productReference = 2C930B252EDF579300140C1D /* SalahTracker.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 2C930B1C2EDF579300140C1D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2C930B612EDF697600140C1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C930B262EDF579300140C1D /* Products */;
 			projectDirPath = "";
@@ -583,6 +595,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C930B612EDF697600140C1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C930B622EDF697600140C1D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C930B612EDF697600140C1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2C930B642EDF697600140C1D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C930B612EDF697600140C1D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C930B1D2EDF579300140C1D /* Project object */;
 }
