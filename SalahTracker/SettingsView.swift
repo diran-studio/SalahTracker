@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct SettingView: View {  // closes struct header
+struct SettingsView: View {  // closes struct header
     var body: some View {  // closes body
-        Text("Setting")  // closes Text
+        Text("Settings")  // closes Text
     }  // closes body
 }  // closes struct
 #Preview {
-    SettingView()
+    SettingsView()
 }

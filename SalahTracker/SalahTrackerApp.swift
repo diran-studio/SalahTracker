@@ -8,25 +8,19 @@
 import SwiftUI
 import SwiftData
 
+import SwiftUI  // closes import
+
 @main
-struct SalahTrackerApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+struct SalahTrackerApp: App {  // closes struct header
+    var body: some Scene {  // closes body
+        WindowGroup {  // closes WindowGroup
+            MainTabView()  // closes MainTabView
+        }  // closes WindowGroup
+    }  // closes body
+}  // closes SalahTrackerApp
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
-    var body: some Scene {
-        WindowGroup {
-            HomeView()
-        }
-        .modelContainer(sharedModelContainer)
+var body: some Scene {
+    WindowGroup {
+        HomeView()
     }
 }
